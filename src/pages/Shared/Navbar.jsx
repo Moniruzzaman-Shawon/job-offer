@@ -23,15 +23,15 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li>
             <details>
-                <summary>Parent</summary>
+                <summary>Choose Career</summary>
                 <ul className="p-2">
                     <li><a>Submenu 1</a></li>
                     <li><a>Submenu 2</a></li>
                 </ul>
             </details>
         </li>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/'>Circulars</NavLink></li>
+        <li><NavLink to='/'>About</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
