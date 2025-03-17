@@ -3,9 +3,12 @@ import {  easeOut, motion } from 'framer-motion';
 import team1 from '../../assets/team/team1.jpg';
 import team2 from '../../assets/team/team2.jpg';
 import team3 from '../../assets/team/team3.jpg';
+import { useNavigate } from 'react-router-dom';
+import HotJobs from './HotJobs';
 
 
 const Banner = () => {
+    const navigate = useNavigate();
     return (
         <div className="hero bg-base-200 min-h-96 ">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -44,7 +47,8 @@ const Banner = () => {
                         Unlock exclusive job opportunities and land your dream job effortlessly.
                         Connect with top employers and get interview calls faster. Sign up now and take the next step in your career!
                     </p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <button
+                    onClick={() => navigate('/jobs')} className="btn btn-primary">Get Started</button>
                 </div>
             </div>
         </div>
