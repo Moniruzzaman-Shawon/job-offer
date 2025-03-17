@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import HotJobsCart from '../Home/HotJobsCart';
 
 const Jobs = () => {
     const [jobs, setJobs] = useState([]);

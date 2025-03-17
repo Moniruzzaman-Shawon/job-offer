@@ -1,10 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const JobDetails = () => {
-    const {title, company,company_logo, salaryRange,location, jobType, category, applicationDeadline, responsibilities} = useLoaderData();
+    const { _id, title, company, company_logo, salaryRange, location, jobType, category, applicationDeadline, responsibilities } = useLoaderData();
 
-    
+
     return (
         <div className="max-w-4xl mx-auto shadow-lg rounded-lg p-6 my-10">
             {/* Company Logo */}
@@ -37,9 +37,11 @@ const JobDetails = () => {
 
             {/* Apply Button */}
             <div className="mt-6">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg">
-                    Apply Now
-                </button>
+                <Link to={`/jobApply/${_id}`} >
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg">
+                        Apply Now
+                    </button>
+                </Link>
             </div>
         </div>
     );

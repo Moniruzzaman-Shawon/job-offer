@@ -30,7 +30,7 @@ const Navbar = () => {
                 </ul>
             </details>
         </li>
-        <li><NavLink to='/'>Circulars</NavLink></li>
+        <li><NavLink to='/'>Jobs</NavLink></li>
         <li><NavLink to='/'>About</NavLink></li>
     </>
     return (
