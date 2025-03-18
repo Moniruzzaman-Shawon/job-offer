@@ -30,6 +30,7 @@ const Navbar = () => {
                 </ul>
             </details>
         </li>
+        <li><NavLink to='/myApplications'>My Applications</NavLink></li>
         <li><NavLink to='/'>Jobs</NavLink></li>
         <li><NavLink to='/'>About</NavLink></li>
     </>
