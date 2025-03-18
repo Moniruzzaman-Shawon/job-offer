@@ -9,23 +9,24 @@ const MyApplications = () => {
         fetch(`http://localhost:4000/job-application?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
-                
+
                 setJobs(data)
-    })
-            
+            })
+
     }, [user.email])
     return (
         <div>
-            <h2 className='text-2xl'>My Application: {jobs.length}</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-white-800 bg-gradient-to-r from-grey-400 to-slate-400 text-white py-4 rounded-lg shadow-lg">
+                My Applications: {jobs.length}
+            </h2>
+
             <div className="overflow-x-auto">
-                <table className="table">
+                <table className="table mb-16">
                     {/* head */}
                     <thead>
                         <tr>
                             <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
+                                
                             </th>
                             <th>Name</th>
                             <th>Job</th>
@@ -38,38 +39,36 @@ const MyApplications = () => {
                         {
                             jobs.map(job =>
                                 <tr key={job._id}>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
-                                <td>
-                                    <div className="flex items-center gap-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-squircle h-12 w-12">
-                                                <img
-                                                    src={job.company_logo}
-                                                    alt="Avatar Tailwind CSS Component" />
+                                    <th>
+                                        
+                                    </th>
+                                    <td>
+                                        <div className="flex items-center gap-3">
+                                            <div className="avatar">
+                                                <div className="mask mask-squircle h-12 w-12">
+                                                    <img
+                                                        src={job.company_logo}
+                                                        alt="Avatar Tailwind CSS Component" />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="font-bold">{job.title}</div>
+                                                <div className="text-sm opacity-50">{job.location}</div>
                                             </div>
                                         </div>
-                                        <div>
-                                            <div className="font-bold">{job.title}</div>
-                                            <div className="text-sm opacity-50">{job.location}</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    {job.category}
-                                    <br />
-                                    <span className="badge badge-ghost badge-sm"></span>
-                                </td>
-                                <td></td>
-                                <th>
-                                    <button className="btn btn-ghost btn-xs"></button>
-                                </th>
-                            </tr>
-                            
-                            
+                                    </td>
+                                    <td>
+                                        {job.category}
+                                        <br />
+                                        <span className="badge badge-ghost badge-sm"></span>
+                                    </td>
+                                    <td></td>
+                                    <th>
+                                        
+                                    </th>
+                                </tr>
+
+
 
                             )
 
